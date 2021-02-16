@@ -1,4 +1,3 @@
-
 played_before = ""
 while played_before.lower() != "xxx":
     # Ask the user if they have played before
