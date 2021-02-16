@@ -7,16 +7,12 @@ while played_before.lower() != "xxx":
     # If they say yes, output 'program continues'
     # If they say no, output 'display instructions'
     # If the answer is invalid, print an error.
-    if played_before == "yes":
+    if played_before == "yes" or played_before == "y":
+        played_before = "yes"
         print("program continues")
 
-    elif played_before == "y":
-        print("program continues")
-
-    elif played_before == "no":
-        print("display instructions")
-
-    elif played_before == "n":
+    elif played_before == "no" or played_before == "n":
+        played_before = "no"
         print("display instructions")
 
     else:
