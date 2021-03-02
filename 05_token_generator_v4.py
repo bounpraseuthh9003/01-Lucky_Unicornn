@@ -6,7 +6,7 @@ STARTING_BALANCE = 100
 
 balance = STARTING_BALANCE
 # Testing loop to generate 20 tokens
-for item in range(0, 100):
+for item in range(0, 10):
     chosen_num = random.randint(1, 100)
 
     # Adjust balance
@@ -17,10 +17,12 @@ for item in range(0, 100):
         chosen = "donkey"
         balance -= 1
     else:
-        chosen = "horse / zebra"
+        if chosen_num % 2 == 0:
+            chosen = "horse"
+        else:
+            chosen = "zebra"
         balance -= 0.5
 
+    print("You got a {}. Your balance is ${:.2f}".format(chosen, balance))
 
 print()
-print("Starting Balance: ${:.2f}".format(STARTING_BALANCE))
-print("Final Balance: ${:.2f}".format(balance))
